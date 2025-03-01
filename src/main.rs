@@ -1,9 +1,11 @@
 use std::fmt::{write, Display, Formatter};
+mod player;
 
 struct Creature {
     name: String,
     health: i32,
     attack: i32,
+    is_alive: bool,
     speed: i32,
     body_parts: Vec<BodyPart>,
 }
@@ -13,6 +15,7 @@ impl Creature {
         name: String,
         health: i32,
         attack: i32,
+        is_alive: bool,
         body_parts: Vec<BodyPart>,
         speed: i32,
     ) -> Creature {
@@ -20,6 +23,7 @@ impl Creature {
             name,
             health,
             attack,
+            is_alive,
             body_parts,
             speed,
         }
@@ -32,6 +36,7 @@ impl Creature {
             name,
             health: 5,
             attack: 10,
+            is_alive: true,
             body_parts: vec![
                 BodyPart::new("Head".to_string(), 6),
                 BodyPart::new("Body".to_string(), 6),
