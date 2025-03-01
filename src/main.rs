@@ -1,7 +1,3 @@
-use creature::creature::Creature;
-use inquire::Select;
-mod creature;
-
 fn main() {
     let mut orc = Creature::new_orc("Orc Berserker".to_string());
     loop {
