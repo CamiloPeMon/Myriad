@@ -1,5 +1,11 @@
+mod creature;
+use creature::creature::Creature;
+use inquire::Select;
+mod player;
+use player::Player;
 fn main() {
     let mut orc = Creature::new_orc("Orc Berserker".to_string());
+    let mut player = Player::new("Hero".to_string()); 
     loop {
         let mut turns_left = 5;
         loop {
@@ -17,6 +23,8 @@ fn main() {
 
             turns_left -= 1;
         }
+        //(5, "Torso".to_string(), false, true, false);
+        player.acction_make_damage_into_body(orc.attack,0,false, true, false);
         println!("The orc attacked you")
     }
 }
