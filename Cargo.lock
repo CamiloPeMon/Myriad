@@ -3,13 +3,6 @@
 version = 4
 
 [[package]]
-name = "Myriad"
-version = "0.1.0"
-dependencies = [
- "inquire",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -137,6 +130,13 @@ dependencies = [
  "log",
  "wasi",
  "windows-sys",
+]
+
+[[package]]
+name = "myriad"
+version = "0.1.0"
+dependencies = [
+ "inquire",
 ]
 
 [[package]]
